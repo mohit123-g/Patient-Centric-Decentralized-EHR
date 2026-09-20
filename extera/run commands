@@ -1,0 +1,19 @@
+T1
+npm run node
+T2
+.\venv\Scripts\Activate.ps1
+npm run deploy
+
+past deploye op in CONTRACT_ADDRESS
+
+ETH_RPC_URL=http://127.0.0.1:8545
+ETH_PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+CONTRACT_ADDRESS=PASTE_NEW_CONTRACT_ADDRESS_HERE
+
+python -c "from backend.blockchain_web3 import w3, contract; print('Connected:', w3.is_connected()); print('Contract:', contract.address)"
+
+python backend\app.py
+
+T3
+.\venv\Scripts\Activate.ps1
+streamlit run frontend\streamlit_app.py
